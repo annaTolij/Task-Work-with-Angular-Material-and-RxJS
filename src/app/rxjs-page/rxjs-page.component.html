@@ -1,0 +1,35 @@
+<div class="row mt-2 ml-2 mr-0">
+    <div class="col-md-2">
+        <button (click)="start()">Start</button>
+    </div>
+    <div class="col-md-2">
+        <p>Сумма: {{ idSum }}</p>
+    </div>
+</div>
+
+<div class="row mt-2 ml-2 mr-0">
+    <div class="col-md-2 font-weight-bold">
+        <p>Первый поток</p>
+    </div>
+    <div class="col-md-1">
+        <ul>
+            <li *ngFor="let item of list1; trackBy: trackByFn;">{{item.id}}</li>
+        </ul>
+    </div>
+    <div class="col-md-2 font-weight-bold">
+        <p>Второй поток</p>
+    </div>
+    <div class="col-md-1">
+        <ul>
+            <li *ngFor="let item of list2; trackBy: trackByFn;">{{item.id}}</li>
+        </ul>
+    </div>
+    <div class="col-md-2 font-weight-bold">
+        <p>Третий поток</p>
+    </div>
+    <div class="col-md-1">
+        <ul>
+            <li *ngFor="let item of list3; trackBy: trackByFn;">{{item.id}}</li>
+        </ul>
+    </div>
+</div>
